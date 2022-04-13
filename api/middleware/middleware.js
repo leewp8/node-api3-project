@@ -31,7 +31,7 @@ function validateUser(req, res, next) {
 		return;
 	}
 
-	req.name = { name: req.body.name.trim() };
+	req.name = req.body.name.trim()
 	next();
 }
 
@@ -42,11 +42,10 @@ function validatePost(req, res, next) {
 		return;
 	}
 
-	req.text = { text: req.body.text.trim() };
+	req.text = req.body.text.trim();
 	next();
 }
 
-// do not forget to expose these functions to other modules
 module.exports = {
   logger,
   validateUserId,
